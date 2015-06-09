@@ -17,6 +17,16 @@ depends: [
 post-messages: [
   "Please read %{doc}%/andromeda/CHANGELOG.md for galactic news and user-relevant changes!
 
+To start using andromeda-mode in emacs, append this to your emacs configuration:
+
+  ;; Add opam emacs directory to the load-path
+  (setq opam-share (substring (shell-command-to-string \"opam config var share 2> /dev/null\") 0 -1))
+  (add-to-list 'load-path (concat opam-share \"/emacs/site-lisp\"))
+  ;; Pre-load Andromeda
+  (require 'andromeda-autoloads)
+
+andromeda-mode currently requires proof-general.
+
 We're happy to receive feed-back and examples of your development.
 
 "
