@@ -1,0 +1,30 @@
+opam-version: "1.2"
+version: "0.1.0~dev"
+name: "andromeda"
+maintainer: "Philipp Haselwarter <philipp@haselwarter.org>"
+authors: "Andrej Bauer, Philipp Haselwarter, Christopher A. Stone"
+homepage: "https://github.com/andrejbauer/andromeda"
+dev-repo: "https://github.com/andrejbauer/andromeda.git"
+bug-reports: "https://github.com/andrejbauer/andromeda/issues"
+build: [[make "PREFIX=%{prefix}%" "opt"]]
+install: [make "PREFIX=%{prefix}%" "install"]
+remove: [make "PREFIX=%{prefix}%" "uninstall"]
+depends: [
+  "ocamlfind" {build}
+  "menhir" {build}
+  "sedlex" {build}
+]
+post-messages: [
+  "You successfully installed the development version of Andromeda.
+
+For now, there is no stable version. In order to receive updates, please run
+
+opam pin add andromeda 0.1~dev
+
+Please read %{doc}%/andromeda/CHANGELOG.md for news and user-relevant changes!
+
+We're happy to receive feed-back and examples of your development.
+
+"
+  {success}
+]
