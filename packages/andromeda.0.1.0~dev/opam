@@ -15,13 +15,7 @@ depends: [
   "sedlex" {build}
 ]
 post-messages: [
-  "You successfully installed the development version of Andromeda.
-
-For now, there is no stable version. In order to receive updates, please run
-
-opam pin add andromeda 0.1~dev
-
-Please read %{doc}%/andromeda/CHANGELOG.md for news and user-relevant changes!
+  "Please read %{doc}%/andromeda/CHANGELOG.md for galactic news and user-relevant changes!
 
 We're happy to receive feed-back and examples of your development.
 
