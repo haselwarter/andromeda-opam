@@ -2,7 +2,7 @@ opam-version: "1.2"
 version: "0.1.0~dev"
 name: "andromeda"
 maintainer: "Philipp Haselwarter <philipp@haselwarter.org>"
-authors: "Andrej Bauer, Gaetan Gilbert, Philipp Haselwarter, Christopher A. Stone"
+authors: "Andrej Bauer, Gaëtan Gilbert, Philipp Haselwarter, Christopher A. Stone"
 homepage: "https://github.com/Andromedans/andromeda"
 dev-repo: "https://github.com/Andromedans/andromeda.git"
 bug-reports: "https://github.com/Andromedans/andromeda/issues"
@@ -16,7 +16,7 @@ depends: [
   "sedlex" {build}
 ]
 post-messages: [
-To start using andromeda-mode in emacs, append this to your emacs configuration:
+"To start using andromeda-mode in emacs, append this to your emacs configuration:
 
   ;; Add opam emacs directory to the load-path
   (setq opam-share (substring (shell-command-to-string \"opam config var share 2> /dev/null\") 0 -1))
