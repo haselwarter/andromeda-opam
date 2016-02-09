@@ -3,20 +3,19 @@ version: "0.1.0~dev"
 name: "andromeda"
 maintainer: "Philipp Haselwarter <philipp@haselwarter.org>"
 authors: "Andrej Bauer, Philipp Haselwarter, Christopher A. Stone"
-homepage: "https://github.com/andrejbauer/andromeda"
-dev-repo: "https://github.com/andrejbauer/andromeda.git"
-bug-reports: "https://github.com/andrejbauer/andromeda/issues"
+homepage: "https://github.com/Andromedans/andromeda"
+dev-repo: "https://github.com/Andromedans/andromeda.git"
+bug-reports: "https://github.com/Andromedans/andromeda/issues"
 build: [[make "PREFIX=%{prefix}%" "opt"]]
 install: [make "PREFIX=%{prefix}%" "install"]
 remove: [make "PREFIX=%{prefix}%" "uninstall"]
 depends: [
+  "ocamlbuild" {build}
   "ocamlfind" {build}
   "menhir" {build}
   "sedlex" {build}
 ]
 post-messages: [
-  "Please read %{doc}%/andromeda/CHANGELOG.md for galactic news and user-relevant changes!
-
 To start using andromeda-mode in emacs, append this to your emacs configuration:
 
   ;; Add opam emacs directory to the load-path
@@ -24,8 +23,6 @@ To start using andromeda-mode in emacs, append this to your emacs configuration:
   (add-to-list 'load-path (concat opam-share \"/emacs/site-lisp\"))
   ;; Pre-load Andromeda
   (require 'andromeda-autoloads)
-
-andromeda-mode currently requires proof-general.
 
 We're happy to receive feed-back and examples of your development.
 
